@@ -18,9 +18,9 @@ img_width, img_height = 150, 150
 
 cnn_update_weights_path = './models/vgg19_model_weight.h5'
 cnn_update_model = './models/vgg19_model.h5'
-train_data_dir = './data/training'
-validation_data_dir = './data/test'
-nb_train_samples = 300
+train_data_dir = './dataset/training'
+validation_data_dir = './dataset/test'
+nb_train_samples = 600
 nb_validation_samples = 120
 epochs = 30
 batch_size = 20
@@ -29,7 +29,7 @@ def save_bottlebeck_features():
     datagen = ImageDataGenerator(rescale=1. / 255)
 
     # build the VGG16 network
-    model = applications.VGG16(include_top=False, weights='imagenet')
+    model = applications.VGG19(include_top=False, weights='imagenet')
 
     generator = datagen.flow_from_directory(
         train_data_dir,

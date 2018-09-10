@@ -11,9 +11,9 @@ img_width, img_height = 150, 150
 
 cnn_update_weights_path = './models/vgg16_model_weight.h5'
 cnn_update_model = './models/vgg16_model.h5'
-train_data_dir = './data/training'
-validation_data_dir = './data/test'
-nb_train_samples = 300
+train_data_dir = './dataset/training'
+validation_data_dir = './dataset/test'
+nb_train_samples = 600
 nb_validation_samples = 120
 epochs = 30
 batch_size = 20
